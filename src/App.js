@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import Header from './componentes/Header';
 import Body from './componentes/Body';
+import Mudanca from './componentes/Mudanca';
+// import Pagina from './componentes/Pagina';
 
 function App() {
-  const [num, setNum] = useState();
+  const [pagina, setPagina] = useState(<Body />);
 
   return (
     <>
-      <Header />
-      <Body />
-      <p>num: {num}</p>
-      <button onClick={setNum()=>num+10}></button>
+      <Header setPagina={setPagina} />
+      <Mudanca pagina={pagina} />
+      {/* <p> Valor do estate: {num}</p>
+      <button onClick={() => setNum(num + 10)}>Somar 10</button> */}
     </>
   );
 }
