@@ -5,6 +5,7 @@ import Relogio from './Relogio';
 import Body from './Body';
 import Pagina from './Pagina';
 import Formulario from './Formulario';
+import Notas from './Notas';
 // import Pagina from './Pagina';
 
 function Header(props) {
@@ -17,10 +18,8 @@ function Header(props) {
       <nav>
         <button onClick={() => props.setPagina(<Body />)}> Home </button>
         <button onClick={() => props.setPagina(<Pagina />)}> Página </button>
-        <button onClick={() => props.setPagina(<Formulario />)}>
-          {' '}
-          Formulário{' '}
-        </button>
+        <button onClick={() => props.setPagina(<Formulario />)}>Formulário</button>
+        <button onClick={() => props.setPagina(<Notas />)}>Notas</button>
       </nav>
     </header>
   );
